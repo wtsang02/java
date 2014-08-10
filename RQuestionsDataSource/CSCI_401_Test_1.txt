@@ -1,0 +1,538 @@
+Name: ________________________ Class: ___________________ Date: __________ ID: A 
+
+
+CSCI-401 Test 1 Practice Questions 
+Multiple Choice 
+
+Identify the choice that best completes the statement or answers the question. 
+
+____ 1. A web application is a type of 
+
+a. client/server application c. JSP application 
+b. database application d. Java application 
+____ 2. A servlet is a/an 
+
+a. HTML document c. HTTP response 
+b. JSP d. Java class 
+____ 3. A servlet 
+
+a. runs in a JSP c. runs on the client 
+b. runs on a server d. runs within HTML code 
+____ 4. An HTTP response 
+
+a. is sent from the web server to the client 
+b. is sent from the client to the web server 
+c. is sent from the servlet engine to the client 
+d. is sent from the client to the servlet engine 
+____ 5. To minimize the amount of Java code in a JSP, you 
+
+a. use HTML pages to perform the business logic 
+b. use HTML pages to act as the user interface 
+c. use servlets to handle the processing requirements 
+d. use servlets to act as the user interface 
+____ 6. When a JSP is requested for the first time, the JSP 
+
+a. calls the servlet that it is associated with 
+b. calls the built-in request object 
+c. is converted into a servlet 
+d. is converted into HTML 
+____ 7. As you develop a web application, you typically use 
+
+a. JSPs for presentation and processing 
+b. servlets for presentation and processing 
+c. JSPs for processing and servlets for presentation 
+d. JSPs for presentation and servlets for processing 
+
+
+
+
+
+____ 8. 
+If you’re developing Java web applications on a Local Area Network, each developer’s computer needs these 
+items installed on it: 
+
+a. Just the Java JDK 
+b. Java JDK and Java EE JAR files 
+c. Java JDK, Java EE JAR files, and web server software 
+d. Java EE JAR files and web server software 
+____ 9. 
+The best way to develop Java web applications is to use an Integrated Development Environment such as: 
+
+a. NetBeans or Eclipse 
+b. Foxfire or Netscape 
+c. FileZilla or CuteFTP 
+d. Tomcat or Apache 
+____ 10. 
+To stop Tomcat, you execute the shutdown command in Tomcat’s ? 
+
+a. webapps subdirectory 
+c. classes subdirectory 
+b. common/lib subdirectory 
+d. bin subdirectory 
+____ 11. 
+Which of the following URLs is valid in Tomcat? 
+
+a. http://localhost:8080 
+c. http://tomcat/localhost:8080 
+b. http://localhost/8080 
+d. http://tomcat/localhost/8080 
+____ 12. 
+If you get a Page Cannot Be Displayed error in Internet Explorer, 
+
+a. the HTTP request can’t connect with the web server 
+b. the HTTP request can’t connect with the servlet engine 
+c. the requested resource can’t be found 
+d. the HTTP response can’t be sent 
+____ 13. All but one of the following is true for a WAR (Web Archive) file. Which one is it? 
+
+a. A WAR file is a JAR file. 
+b. A WAR file contains all the directories and files for a web application. 
+c. When you deploy an application with a WAR file, the web server must be running. 
+d. To deploy an application with a WAR file, you copy it into its document root directory. 
+
+____ 14. 
+The servlets for a web application are stored in this directory and its subdirectories: 
+
+a. WEB-INF 
+c. WEB-INF\lib 
+b. WEB-INF\classes 
+d. WEB-INF\servlets 
+____ 15. 
+The web.xml file can do all but one of the following. Which one is it? 
+a. Define initialization parameters for a servlet. 
+b. Define initialization parameters for the entire application. 
+c. Enable servlet mapping so a client can call a servlet using any URL pattern. 
+d. Set the web server port for the application. 
+
+
+
+
+
+
+____ 16. 
+If you have to change the port that’s used by Tomcat, you make the change in the 
+
+a. server.xml file c. catalina.bat file 
+b. web.xml file d. startup.bat file 
+____ 17. You can use Tomcat’s Web Application Manager to 
+
+a. Start, stop, or undeploy an application. 
+b. Start, stop, or deploy an application. 
+c. Start, stop, reload, or undeploy an application. 
+d. Start, stop, reload, or deploy an application. 
+____ 18. 
+If servlet reloading is turned on when a servlet is requested, Tomcat 
+
+a. reloads the servlet before running it 
+b. reloads the servlet if it is a later version than the one in memory 
+c. reloads all of the servlets for the application 
+d. reloads all the servlets for all of the deployed applications 
+____ 19. When you use a newly installed version of NetBeans to start a new project, the project consists of 
+
+a. WEB-INF directory and a working web.xml file 
+b. the starting code for a JSP 
+c. the WEB-INF and META-INF directories, a working web.xml file, and starting code for a JSP 
+d. the WEB-INF and META-INF directories, a working web.xml file, and starting code for a servlet 
+____ 20. If two or more NetBeans projects are open, the main project is 
+
+a. 
+the one at the top of the Projects window 
+b. 
+the one that gets executed if you execute the Run Main Project command 
+c. 
+the one that was last opened 
+d. 
+the one that was last executed 
+____ 21. 
+When you use NetBeans to create a new servlet, NetBeans does all but one of the following. Which one is 
+it?: 
+
+a. 
+NetBeans provides starting code for the servlet. 
+b. 
+NetBeans lets you provide URL patterns for accessing the servlet. 
+c. 
+NetBeans lets you specify the package that you want the servlet to be in. 
+d. 
+NetBeans lets you change the options for servlet reloading. 
+____ 22. 
+When you use NetBeans to edit a web.xml file, you can either use the XML tab to edit the XML code 
+manually or you can use 
+
+a. 
+the Intellisense feature to modify the code 
+b. 
+the Output window to set specific values 
+c. 
+the graphical interface that’s provided by one of the six other tabs 
+d. 
+the XML Palette window to add and modify portions of code 
+
+
+
+ 
+
+
+____ 23. 
+To add an existing file to a NetBeans project on a Windows system, you can use the Windows Explorer to 
+copy the file and then paste the file into the appropriate directory in the NetBeans 
+
+a. 
+Projects window 
+b. 
+Files window 
+c. 
+Either the Projects or the Files window 
+d. None of the options
+
+____ 24. 
+To deploy a NetBeans application to a remote server, you can copy its WAR file 
+
+a. 
+from the dist directory of the application to the document root directory of the server 
+b. 
+from the WEB-INF directory of the application to the document root directory of the 
+server 
+c. 
+from the dist directory of the application to the webapps directory of the server 
+d. 
+from the WEB-INF directory of the application to the webapps directory of the server 
+____ 25. 
+To run an HTML page, JSP, or servlet without running the entire application, you can 
+
+a. 
+right-click on the file in the Projects window and select the Run File command 
+b. 
+select the file in the Projects window and press F6 
+c. 
+double-click on the file in the Projects window 
+d. 
+select the Run File command and then select the file in the Run File dialog box 
+____ 26. 
+The Title tag in an HTML document specifies the title 
+
+a. 
+that’s used to refer to the document 
+b. 
+that’s used to refer to the application 
+c. 
+that’s displayed in the title bar of the browser 
+d. 
+that’s displayed at the start of the web page 
+____ 27. 
+Which of the following is a valid HTML comment? 
+
+a. 
+// comment c. <%--comment --> 
+b. 
+<!--comment --> d. </comment> 
+____ 28. 
+The Anchor tag that follows will go to which directory? 
+
+<a href="/troubleShooting">Trouble Shooting</a> 
+
+
+a. 
+the troubleShooting directory that’s subordinate to the current directory 
+b. 
+the troubleShooting directory that’s in the webapps directory 
+c. 
+the troubleShooting directory that’s one level up from the current directory 
+d. none of the other options.
+____ 29. 
+The Anchor tag that follows 
+
+<a href="update.jsp">Update</a> 
+
+
+a. 
+displays Update as a hyperlink 
+b. 
+displays update.jsp as hyperlink 
+c. 
+displays Update as plain text 
+d. 
+displays update.jsp as plain text 
+e. 
+displays nothing 
+
+
+
+
+
+____ 30. When you create an HTML table, one cell can 
+
+a. span multiple columns 
+b. span multiple rows 
+c. span just the heading columns 
+d. span multiple rows or columns 
+____ 31. An HTML form can be used to pass data to 
+
+a. another HTML page 
+b. a servlet 
+c. aJSP 
+d. a JSP or a servlet 
+____ 32. What happens when the button in the following form is clicked? 
+
+<form action="grades.jsp" method="get"> 
+ID: <input type="text" name="studentID"><br> 
+<input type="submit" value="Get My Grades"> 
+
+
+</form> 
+
+
+a. the data in the studentID text box is passed to the get method 
+b. the user is prompted to enter a student ID 
+c. the data in the studentID text box is passed to the grades.jsp file 
+d. the grades.jsp file is requested, but no data is passed 
+____ 33. How many radio buttons from the following code can be selected at any given time? 
+
+<input type="radio" name="address" value="Home">Home Address 
+<input type="radio" name="delivery" value="FedEx">Federal Express 
+<input type="radio" name="delivery" value="UPS">UPS 
+
+
+a. 0 c. 2 
+b. 1 d. 3 
+____ 34. The tabindex attributes of the controls on a form determine 
+
+a. the sequence in which they appear on the form 
+b. the index values that can be used to refer to the controls 
+c. the sequence in which they will be passed to the related JSP 
+d. the sequence in which they will receive the focus when the Tab key is pressed 
+____ 35. A JSP expression can contain any Java expression that evaluates to a 
+
+a. String object c. primitive type 
+b. Java object d. primitive type or Java object 
+____ 36. Which of the following JSP expressions is valid? 
+
+a. <%= request.getParameter("occupation"); %> 
+b. <%= request.getParameter("occupation") %> 
+c. <%= String occupation = request.getParameter("occupation"); %> 
+d. <%= String occupation = request.getParameter("occupation") %> 
+e. None of the above 
+
+
+
+____ 37. The following code 
+
+
+<% 
+
+
+String[] mailTypes = request.getParameterValues("mail"); 
+
+
+%> 
+
+
+a. returns the name of all request parameters from the mail.jsp page 
+b. returns the first value of the mail parameter or null if none exist 
+c. returns all values of the mail parameter or null if none exist 
+d. returns the values of all request parameters from the mail.jsp page 
+e. is invalid 
+____ 38. In general, you should use the Post method instead of the Get method when 
+
+a. the request writes data to the server 
+b. the request reads data from the server 
+c. you want users to be able to include parameters in their bookmarks 
+d. when you’re transferring 4 KB or less of data 
+____ 39. To use your own Java class in a JSP, you can import the class with a 
+
+a. JSP scriptlet  
+b. JSP expression  
+c. JSP directive 
+d. JSP declaration 
+____ 40. Which of the following is a valid JSP comment?  
+ 
+a. // comment 
+b. <!--comment --> 
+c. <%--comment --%>  
+d. </comment> 
+____ 41. In the code that follows, the numOfErrors variable 
+<%! int numOfErrors = 1; %> 
+a. is initialized each time the page is requested 
+b. is an instance variable that is not thread-safe  
+c. is ignored by the JSP engine 
+d. is invalid JSP code 
+
+____ 42. When a JSP is requested for the first time, the JSP engine does all but one of the following. Which one is it? 
+
+a. generates a servlet for the JSP 
+b. generates the HTML code for the JSP 
+c. creates one instance of the servlet class 
+d. creates one thread 
+____ 43. When a JSP is requested for the second time, the JSP engine 
+
+a. creates a thread that has its own copy of the instance variables 
+b. creates a thread that has its own copy of the local variables 
+c. creates an instance of the JSP that has its own copy of the instance variables 
+d. creates an instance of the JSP that has its own copy of the local variables 
+
+
+
+
+
+
+____ 44. The result set retrieved by the following SELECT statement contains records that have 
+
+SELECT Balance, Num 
+FROM Accounts 
+WHERE Balance < 0 
+
+
+a. one column from the Balance table where the Num column is less than 0 
+b. two columns from the Balance table where the Num column is less than 0 
+c. all fields from the Accounts table where the Balance column is less than 0 
+d. two fields from the Accounts table where Balance column is less than 0 
+____ 45. Which of the following is not a way to insert data into a table? 
+
+a. an INSERT statement c. a SQL script 
+b. a LOAD command d. a configuration file 
+____ 46. When you code an inner join in a SELECT statement you do not need to specify 
+
+a. the name of the first table 
+b. the name of the second table 
+c. an ORDER BY clause 
+d. a join column for the first table 
+e. a join column for the second table 
+____ 47. In a left outer join, the result set includes 
+
+a. matched rows in both tables and unmatched rows in the second table 
+b. all rows in the second table and matched rows in the first table 
+c. matched rows in both tables and unmatched rows that don’t contain nulls 
+d. all rows in the first table and matched rows in the second table 
+____ 48. The INSERT statement that follows inserts 
+
+INSERT INTO Download (UserID, DownloadDate, DownloadFilename, ProductCode) 
+VALUES (1, NOW(), 'jr01_filter.mp3', 'jr01') 
+
+
+a. four rows and four columns into the Download table 
+b. one row and four columns into the Download table 
+c. four rows and one column into the Download table 
+d. one row and three columns into the Download table 
+____ 49. A SQL script can be used to 
+
+a. create a database and all of its tables 
+b. load data into the tables of a database 
+c. bothAandB 
+d. none
+
+
+
+CSCI-401 Test 1 Practice Questions 
+Answer Section 
+
+MULTIPLE CHOICE 
+
+1. ANS: A PTS: 1 
+
+2. ANS: D PTS: 1 
+
+3. ANS: B PTS: 1 
+
+4. ANS: A PTS: 1 
+
+5. ANS: C PTS: 1 
+
+6. ANS: C PTS: 1 
+
+7. ANS: D PTS: 1 
+
+8. ANS: B PTS: 1 
+
+9. ANS: A PTS: 1 
+
+10. ANS: D PTS: 1 
+
+11. ANS: A PTS: 1 
+
+12. ANS: A PTS: 1 
+
+13. ANS: D PTS: 1 
+
+14. ANS: B PTS: 1 
+
+15. ANS: D PTS: 1 
+
+16. ANS: A PTS: 1 
+
+17. ANS: C PTS: 1 
+
+18. ANS: B PTS: 1 
+
+19. ANS: C PTS: 1 
+
+20. ANS: B PTS: 1 
+
+21. ANS: D PTS: 1 
+
+22. ANS: C PTS: 1 
+
+23. ANS: C PTS: 1 
+
+24. ANS: C PTS: 1 
+
+25. ANS: A PTS: 1 
+
+26. ANS: C PTS: 1 
+
+27. ANS: B PTS: 1 
+
+28. ANS: B PTS: 1 
+
+29. ANS: A PTS: 1 
+
+30. ANS: D PTS: 1 
+
+31. ANS: D PTS: 1 
+
+32. ANS: C PTS: 1 
+
+33. ANS: C PTS: 1 
+
+34. ANS: D PTS: 1 
+
+35. ANS: D PTS: 1 
+
+36. ANS: B PTS: 1 
+
+37. ANS: C PTS: 1 
+
+38. ANS: A PTS: 1 
+
+39. ANS: C PTS: 1 
+
+1 
+
+
+
+ID: A 
+
+
+40. ANS: C PTS: 1 
+
+41. ANS: B PTS: 1 
+
+42. ANS: B PTS: 1 
+
+43. ANS: B PTS: 1 
+
+44. ANS: D PTS: 1 
+
+45. ANS: D PTS: 1 
+
+46. ANS: C PTS: 1 
+
+47. ANS: D PTS: 1 
+
+48. ANS: B PTS: 1 
+
+49. ANS: C PTS: 1 
+
+2 
+
+
+

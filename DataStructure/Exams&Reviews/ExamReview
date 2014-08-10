@@ -1,0 +1,736 @@
+HW Review
+
+Questions 1 and 2 refer to the method design, given below. The method prints a design of *’s.
+
+public static void design(int n){
+	for(int i=n;  i>=1; i--){
+		for(int j=1; j<=i; j++){
+			System.out.print(“*”);
+			}
+				System.out.println();
+		}
+	}
+
+1.	In order for the method design to be guaranteed to print some *’s, which of the following is a correct precondition?
+
+a.	n!=0
+b.	n<0
+c.	n<=0
+d.	n>0
+e.	n>=0
+
+2.	Which of the following methods will result in the same output as the method design?
+
+a.	public static void design(int n){
+System.out.println();
+				if(n>=1){
+					design(n-1);
+			}
+			else{
+				System.out.print(“*”);
+			}
+		}
+
+b.	public static void design(int n){
+if(n==1){
+	System.out.println(“*”);
+}
+else{
+	System.out.println();
+		for(int j=1; j<=n; j++){
+			System.out.print(*”);
+		}
+			design(n-1);
+	}
+}
+	
+
+
+
+
+
+
+c.	public static void design(int n){
+if(n==1){
+	System.out.println(“*”);
+}
+else{
+	for(int j=1; j<=n; j++){
+		System.out.println(“*”);
+	}
+System.out.println();
+			design(n-1);
+	}
+}
+
+d.	public static void design(int n){
+if(n==1){
+	System.out.println(“*”);
+}
+else
+	for(int j=1; j<=n; j++){
+		design(n-1);
+System.out.println(“*”);
+	}
+}
+
+e.	public static void design(int n){
+if(n==1){
+	System.out.println(“*”);
+}
+else
+	for(int j=1; j<=n; j++){
+		System.out.println(“*”);
+design(n-1);
+}
+}
+
+3.	The following code segments are intended to eliminate duplicates from an ArrayList of integers.
+
+I.	for(int i=0; i<arr.size()-1; i++){
+if(arr.get(i).equals(arr.get(i+1))){
+	arr.remove(i);
+}
+			}
+
+II.	int i=0;
+while(i<arr.size()-1){
+		if(arr.get(i).equals(arr.get(i+1))){
+			arr.remove(i);
+		}
+			else{
+				i++;
+			}
+		}
+
+a.	Choices I and II work as intended for all ArrayLists of Integers.
+b.	Choices I and II work as intended for all ArrayLists of integers that are sorted.
+c.	Choices I and II work as intended for all non-empty ArrayLists of Integers.
+d.	Choice I works as intended for ArrayLists of Integers that are sorted but Choice II does not.
+e.	Choice II works as intended for ArrayLists of Integers that are sorted but Choice I does not.
+
+4.	The following code segment is intended to eliminate duplicates from an ArrayList of Integers.
+
+Iterator<Integer> iter=arr.iterator();
+Integer num=iter.next();
+	while(iter.hasNext()){
+		Integer num2=iter.next();
+			if(num.equals(num2)){
+				iter.remove();
+			}
+			else{
+				num=num2;
+			}
+		}
+Which statement about the code segment is true?
+
+a.	This code segment works as intended for all ArrayLists of Integers.
+b.	This code segment works as intended for all ArrayLists of Integers that are sorted.
+c.	This code segment works as intended for all non-empty ArrayLists of Integers.
+d.	This code segment works as intended for all non-empty ArrayLists of Integers that are sorted.
+e.	This code segment eliminates only those values that are duplicates of the first value in the ArrayList.
+
+5.	Suppose it takes x miliiseconds to sort a set of data using the selection sort algorithm. Approximately how long will it take to sort a data set that is four times as large? C
+
+a.	x milliseconds
+b.	4*x milliseconds
+c.	16*x milliseconds
+d.	x*x milliseconds
+e.	There is no way to determine the answer.
+
+Questions 6 and 7 refer to the following algorithm for sorting values in an array.
+
+public class Orderer{
+	public Orderer(int[] anArray){
+		a=anArray;
+	}
+		public void order(){
+			por(int i=0; i<a.length-1; i++){
+				int position=findPosition(i);
+				swap(position, i);
+			}
+		}
+
+
+
+
+
+private int findPosition(int from){
+		int pos=from;
+			for(int i=from+1; i<a.length; i++)
+				if(a[i]<a[pos]){
+					pos=i;
+				}
+					return pos;
+				}
+		private void swap(int I, int j){
+			int temp = a[i];
+				a[i]=a[j];
+					a[j]=temp;
+			}
+		private int[] a;
+}
+
+6.	Which of the following statements is true about the Orderer method order above?
+
+a.	This algorithm closely resembles the selection sort algorithm.
+b.	This algorithm closely resembles the insertion sort algorithm.
+c.	This algorithm closely resembles the merge sort algorithm.
+d.	This algorithm reverses the order of the data in the array.
+e.	This sort algorithm randomly reorders elements in the array.
+
+7.	If the array a contains the numbers 5, 2, 12, 6, and 72, how many times is the comparison
+
+a[i]<a[pos]
+
+		made?
+
+a.	1
+b.	5
+c.	10
+d.	25
+e.	50
+
+8.	Which of the following statements about classes and interfaces are true?
+
+I.	Abstract classes can contain constructors
+II.	Interfaces can contain constructors.
+III.	Classes that have no abstract methods can contain constructors
+
+a.	III only
+b.	I and II only
+c.	II and III only
+d.	I and III only
+e.	I, II, and III
+
+9.	Consider the NumberGenerator class defined below.
+
+public class NumberGenerator{
+	public NumberGenerator(int numberOfPositions, int startNum){
+		digits=numberOfPositions;
+currentDigit=startNum;
+	if(digits>1){
+		tail=new NumberGenerator(digits-1, currentDigit+1);
+	}
+else{
+		tail=null;
+}
+		}
+	
+		public String nextElement(){
+			String r=” “;
+				if(digits==1){
+					r=currentDigit + “ “;
+					return r;
+			}
+				r=currentDigit+tail.nextElement();
+					if(!tail.hasMoreElements()){
+						currentDigit++;
+							tail=new NumberGenerator(digits-1, currentDigit+1);
+						}
+			return r;
+		}
+		
+		public Boolean hasMoreElements(){
+			return (currentDigit<=MAXDIGITS) && (digits<= MAXDIGITS – currentDigit +1);
+		}
+
+		private int digits;
+		private NumberGenerator tail;
+		private int currentDigit;
+		private final int MAXDIGITS=4;
+	}
+	
+	What is the result of the following code segment?
+
+		NumberGenerator combs = new NumberGenerator(3, 0);
+		int count=1;
+			while(combs.hasMoreelements() && count<=5)){  // only printing 5
+				System.out.print(combs.nextElement() + “ “);
+				count++;
+			}
+
+a.	012 013 014 023 024
+b.	000 001 002 003 004
+c.	010 012 013 014 020
+d.	000 111 222 333 444
+e.	012 013 014 022 023
+
+
+
+
+
+
+For Questions 10 and 11, assume that the following declarations are made.
+
+	LinkedList<Integer> aList=new LinkedList<Integer>();
+	PriorityQueue<Integer> pq=new PriorityQueue<Integer>();
+	Stack<Integer> s=new Stack<Integer>();
+	Queue<Integer> q=new LinkedList<Integer>();
+
+10.	Suppose the following segment of code is executed.
+
+aList.add(1);
+aList.add(2);
+aList.add(3);
+aList.add(4);
+aList.add(5);
+
+ListIterator<Integer> iter=aList.listIterator();
+while(iter.hasNext()){
+	Integer item=iter.next();
+		s.push(item);
+			q.enqueue(item);
+		}
+System.out.print(“Queue: “);
+	while(!q.isEmpty()){
+		System.out.print(q.dequeue());
+	}
+		System.out.println();
+			System.out.print(“Stack: “);
+					while(!s.isEmpty()){
+						System.out.print(s.pop());
+	}
+
+What would be printed?
+
+a.	Queue: 12345
+Stack: 	54321
+
+b.	Queue: 12345
+Stack:	12345
+
+c.	Queue: 54321
+Stack:	12345
+
+d.	Queue: 54321
+Stack:	54321
+
+e.	Queue:
+Stack:
+
+	
+
+
+
+
+11.	Suppose the following segment of code is executed.
+
+		pq.add(new Integer(5));	
+		pq.add(new Integer(9));	
+		pq.add(new Integer(6));	
+		pq.add(new Integer(4));	
+		pq.add(new Integer(1));	
+		pq.add(new Integer(7));	
+
+	while(!(pq.isEmpty())){
+		Integer num = pq.peek();
+			if(num % 2==0){
+				s.push(pq.remove());
+			}
+			else{
+					q.add(pq.remove());
+			}
+		}
+			System.out.print(“Queue: “);
+				while(!q.isEmpty()){
+					System.out.print(q.remove());
+			}
+				System.out.println();
+					System.out.print(“Stack: ”);
+						while(!s.isEmpty()){
+							System.out.print(s.pop());
+		}
+ 		
+	What would be printed?
+
+a.	Queue: 5917
+Stack: 64
+b.	Queue: 1579
+Stack: 64
+c.	Queue: 5917
+Stack: 46
+d.	Queue: 1579
+Stack: 46
+e.	Queue: 596417
+Stack: 
+
+For Questions 12 and 13: Suppose that the implementation of add in the SomePriorityQueue class is 
+
+	Public void add(Object x){
+		someDataImplementation.add(x);
+	}
+	
+and that the elements are added to this priority queue in random order.
+
+
+
+
+
+12.	Which choice for a data structure for someDataImplementation would yield the fastest retrieval time for the SomeProrityQueue method peek?
+
+a.	java.util.LinkedList
+b.	java.util.ArrayList
+c.	java.util.HashSet
+d.	java.util.TreeSet
+e.	java.util.TreeMap
+
+13.	Assuming that the choice of data type for someDataImplementation yields the fastest retrieval time for peek, the big-Oh efficiency for peek is
+
+a.	O(1)
+b.	O(n)
+c.	O(log(n))
+d.	O(n log(n))
+e.	O(n²)
+
+14.	Suppose that the Integers 9, 5, 3, 7, 1 are added, in the order given, to an 
+initially empty queue, q, and that the Integers 2, 4, 6, and 8 are added, in the order given,
+ to an initially empty stack, s. Also suppose the hp is an initially empty min-heap and that the 
+ min-heap method addToHeap adds an element to the min-Heap using the standard algorithm for inserting
+  into a heap thus maintaining the min-heap properties after each insertion into the heap. 
+After the following code is executed.
+
+while(!q.isempty()){
+	hp.addToHeap(q.remove());
+	}
+		while(!s.isempty()){
+			hp.addToHeap(s.pop());
+	}
+
+Which of the following min-heaps is a representation of hp?
+
+a.				
+
+
+						
+		
+
+
+
+
+
+
+  	
+
+
+
+
+
+
+
+
+b. 	
+
+
+
+
+
+
+
+
+	
+
+c. 
+			
+
+	
+
+
+
+	
+
+d. 
+			
+
+
+
+
+
+
+
+
+e.
+					
+										
+
+
+
+
+
+15.	The linked list class, java.util.LinkedList, defines the method addLast(). The run-time efficiency of this allLast method is:
+a.	O(1)
+b.	O(log(n))
+c.	O(n)
+d.	O(n log(n))
+e.	O(n²)
+
+Questions 16-18 refer to the following partial class declaration.
+public class LList{
+public LList(){
+	first=null;
+}
+
+	public void addLast(Object obj){
+		ListNode newNode=new ListNode(obj, null);
+			if(first==null){
+				first=newNode();
+			}
+			else{
+				ListNode temp=first;
+					while(temp.getNext() !=null){
+							temp=temp.getNext();
+					}
+						temp.setNext(newNode);
+					}
+				}
+
+	public void addLastRecursive(Object obj){
+		first=addLastHelper(first, obj);
+	}
+
+	private ListNode addLastHelper(ListNode list, Object obj){
+// code goes here
+}
+	//… Other methods and data not shown
+
+	private List Node first;
+}
+
+16.	The linked list class, LList, defines the method addLast(). The run-time efficiency of this addLast method is:
+
+a.	O(1)
+b.	O(log(n))
+c.	O(n)
+d.	O(n log(n))
+e.	O(n²)
+
+17.	The LList method addLastRecursive, with its helper method addLastHelper, is intended to have the same result as the LList method addLast defined above. Which of the following is a correct implementation of a addLastHelper?
+
+a.	private ListNode addLastHelper(ListNode list, Object obj){
+if (list==null){
+	return new ListNode(obj, null);
+}
+else{
+	addLastHelper(list.getNext(), obj);
+		return list;
+}
+		}
+
+b.	private ListNode addLastHelper(ListNode list, Object obj){
+if (list==null){
+	return new ListNode(obj, null);
+}
+else{
+	list=(addLastHelper(list.getNext(), obj));
+}
+	return list;
+		}
+
+c.	private ListNode addLastHelper(ListNode list, Object obj){
+if (list==null){
+	return new ListNode(obj, null);
+}
+else{
+	return addLastHelper(list.getNext(), obj);
+}
+		}
+
+
+
+
+
+
+
+
+	
+d.	private ListNode addLastHelper(ListNode list, Object obj){
+if (list==null){
+	return new ListNode(obj, null);
+}
+else{
+		list.setNext(addLastHelper(list.getNext(), obj;
+			return list;
+		}
+	}
+
+e.	private ListNode addLastHelper(ListNode list, Object obj){
+if (list==null){
+	return new ListNode(obj, null);
+}
+else{
+		list.setNext(addLastHelper(new ListNode(obj, null), obj));
+	}
+}
+
+18.	Which of the following statements about the LList methods addLast and addLastRecursive is true?
+
+a.	addLastRecursive is always more efficient that addLast.
+b.	addLast is always more efficient than addLastRecursive.
+c.	For small lists, there is no significant difference in efficiencies between addLast and addLastRecursive.
+d.	addLast is only more efficient than addLastRecursive if the elements are added to the list in increasing order.
+e.	addLast is only more efficient than addLastRecursive if the elements are added to the list in decreasing order.
+
+19.	You have been asked to write a program that will serve as a Spanish-English dictionary of commonly used words and phrases. If the input to your program is a word or phrase in English, your program should output the equivalent word or phrase in Spanish. Which of the following data structures would be best choice if you will be adding information to your dictionary and doing many look-ups in the dictionary.
+
+a.	An array of maps where each key is a string representing the English word or phrase and each value is the corresponding Spanish word or phrase.
+b.	A HashMap where each key is a string representing the English word or phrase and each value is the corresponding Spanish word or phrase.
+c.	A TreeMap where each key is a string representing the English word or phrase and each value is the corresponding Spanish word or phrase.
+d.	An unordered linked list of Words where a Word object has an eccessor method that can return the Spanish form of the English word.
+e.	An ordered linked list of words where a Word object that has an accessor method that can return the Spanish form of the English word.
+
+
+
+
+
+
+
+
+20.	Consider the incomplete BinaryTree class below.
+
+/** This class implements a binary tree whose nodes hold objects that implement the Comparable interface
+*/
+
+public class BinaryTree{
+	Public BinaryTree(){…}//constructs an empty tree
+//return true if root==null, false otherwise
+public boolean isEmpty(){…}
+
+	public void insert(Comparable obj){…}
+//Inserts a new node into the tree in order using the Binary Search Tree insert algorithm
+
+//Prints the TreeNode values using an inorder traversal order.
+
+public void inOrder(){…}
+
+public void swapBigAndSmall(){
+
+		//Code goes here
+}
+private TreeNode root;
+	}
+
+The BinaryTree method swapBigAndSmall is intended to exchange the largest and the smallest values
+ in the tree. For example, suppose the integers 15, 8, 25, 6, 14, 24, 20, 22, 30, 13, 26, 
+ were insterted into a tree in the order given. An inorder traversal of the tree would print:
+
+	6, 8, 13, 14, 15, 20, 22, 24, 25, 26, 30
+	
+	After a call to swapBigAndSmall, an inorder traversal of the same tree would print
+
+		30, 8, 13, 14, 15, 20, 22, 24, 25, 26, 6
+
+Which of the following code segments could be the body of swapBigAndSmall so that the intended task is completed?
+
+I.	TreeNode temp=root;
+TreeNode temp2=root;
+
+	while(temp.getLeft()!=null){
+		temp2=temp;
+			temp=temp.getLeft();
+	}
+	TreeNode almostSmall=temp2;
+	temp=root;
+	temp2=root;
+		while(temp.getRight()!=null){
+			temp2=temp;
+			temp=temp.getRight();
+	}
+	TreeNode almostBig=temp2;
+	Temp=almostSmall.getLeft();
+	almostSmall.stLeft(almostBig.getRight());
+	almostBig.setRight(temp);
+
+II.	TreeNode temp=root;
+TreeNode temp2=root;
+
+	while(temp.getLeft()!=null){
+		temp2=temp;
+			temp=temp.getLeft();
+	}
+	TreeNode almostSmall=temp;
+	temp=root;
+	temp2=root;
+		while(temp.getRight()!=null){
+			temp2=temp;
+			temp=temp.getRight();
+	}
+	TreeNode big=temp;
+	Object tempValue=small.getValue();
+	small.setValue(big.getValue());
+	big.setValue(tempValue);
+
+III.	TreeNode temp=root;
+TreeNode temp2=root;
+
+	while(temp.getLeft()!=null){
+		temp2=temp;
+			temp=temp.getLeft();
+	}
+	TreeNode almostSmall=temp2;
+	temp=root;
+	temp2=root;
+		while(temp.getRight()!=null){
+			temp2=temp;
+			temp=temp.getRight();
+	}
+	TreeNode almostBig=temp2;
+	almostSmall.setLeft(almostBig.getRight());
+	almostBig.setRight(almostSmall.getLeft());
+
+a.	I only
+b.	II only
+c.	III only
+d.	I and II only
+e.	I, II, and III
+
+
+
+
+
+
+
+
+Answers
+
+1.d
+2.c
+3.e
+4.d
+5.c
+6.a
+7c
+8.d
+9.a
+10.a
+11.b
+12.d
+13.c
+14.b
+15.a
+16.c
+17.d
+18.c
+19.b
+20.b
+
+Explanation to question 12: Because the elements are added in random order, a LinkedList and 
+an ArrayList would require traversals to find the smallest element (O(n) operations).
+ A HashSet is not appropriate if we are concerned with order. A map is not appropriate
+  because our objects do not have a mapping of key and value. A TreeSet is
+ implemented using a binary search tree so the smallest element is returned with O(log n) efficiency.
+
+Explanation to question 17: Each recursive call needs to set the next field of the node. 
+Answers a, b, and c will each end with one node in the list.
+ Answers e will result in an endless loop.
+
+Explanation to question 20: Choice I will swap references. If the leftmost node has a right child
+ or the rightmost node has a left child, this option will not work. 
+ Choice III has the same problem and the additional problem of attempting to swap without using temp.
+ Choices II is correct. Swapping values does not interfere with references.
+
+
+
+
+
+		
+

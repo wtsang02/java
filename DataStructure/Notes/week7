@@ -1,0 +1,74 @@
+Sets
+2 data strucures: 1 array 2 linked list
+Dont care about the order: many applications.-->better performance
+math-->set-->2 or more
+1 add remove an element
+2 does the set contain a given object
+3 List all the elements
+
+set rejects duplicates-Math
+if the object is in the set- add it again -> ignore it
+use a linked list to implement a set-->slow-->Linear Search through the list.
+add-requires a search though the list--> do not add duplicates.
+2 different data structures: 1. hash table 2. trees
+designed for speed.
+implement--> set interface
+
+Set<String> names=new HashSet<String>();
+from the reference to the HashSet HashSet<String> object in a Set<String>
+variable adding and removing set elements: names.add("xxx"); names.remove("xyx");
+if(names.contains("juliet"))...
+contains method test wheather an element is contained is the set.
+to list all elements in the set--> get an iterator.
+ex:
+Iterator<String> iter=new names.iterator();
+	while(iter.hasNext()){
+		String name=iter.next()
+		...
+		}
+		//hasNext(),next() to step thorough the set.
+		
+for each:
+	for(String name:names){
+	..
+	}//arrays, lists can be used instead of using an iterator.
+	elements are not visited in the order in which you inserted them.
+	they are visited in the order in which the HashSet keeps them for rapid execution.
+	of its methods.
+	ListIterator!=iterator
+	the ListIterator has an add() to add an element at the list iterator posistion.
+	iterator interface has no such method. you can add the element anywhere
+	Always add elements directly to the set.
+	never to an iterator of the set.
+	-------------------------------------------------------------
+Map: data type that keeps association between keys and values.
+
+keys:                                  Values
+	Romeo								green
+	Adam								red
+	eve									blue
+	Juliet								blue
+Math map is a function from one set to another set(values).
+keys-->unique values
+a value associated with several keys
+Java Lirary: 1.HashMap 2.TreeMap
+implements-->map interface.
+Map<String,Color> favoriteColors=new HashMap<String,Color>();
+Store the reference to the map object in a map reference.
+put()-->add an association:
+favoriteColors.put("juliet",Color.Pink);
+change the value of an existing association-->call put again.
+favoriteColors.put("Juliet",Color.Red);
+get()-returns the value associated with a key
+Color JulietsFavoriteColor=favoriteColor.get("Juliet");
+a key that is not associated with any values--> get() returns null. remove()-key
+favoriteColor.remove("Juliet");
+enumerate all keys: set of keys-->keySet() in a map.
+Set<String>keySet=m.keySet();
+for(String key:keySet){
+	Color Value=m.get(key);
+	System.out.println(key+"--->"+value);
+	}
+	for each key-->find the associated value with the get().
+	
+	

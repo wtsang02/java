@@ -1,0 +1,1106 @@
+CSCI-300 Final Practice Questions -300 Final Practice Questions 
+
+Name___________________________________ 
+
+MULTIPLE CHOICE. Choose the one alternative that best completes the statement or answers the question. 
+
+1) What result set will the following query return? 1) 
+
+Select item_no, description 
+from item 
+where weight > 100 and weight < 200; 
+
+
+A) The item_no for all items weighing between 101 and 199 
+B) The item_no for all items weighing more than 200 
+C) The item_no and description for all items weighing less than 100 
+D) The item_no and description for all items weighing between 101 and 199 
+
+2) Indexes are created in most RDBMSs to: 2) 
+
+A) decrease the amount of disk space utilized. 
+B) provide rapid random and sequential access to base-table data. 
+C) increase the cost of implementation. 
+D) provide a quicker way to store data. 
+
+
+3) Which of the following types of data can be stored in a database? 3) 
+A) Letters B) Voice 
+C) Numbers D) All of the above 
+
+4) An attribute that must have a value for every entity (or relationship) instance is a(n): 4) 
+A) composite attribute. B) optional attribute. 
+C) multivalued attribute. D) required attribute. 
+
+5) ________ are established between entities in a well -structured database so that the desired 5) 
+information can be retrieved. 
+A) Lines B) Entities C) Relationships D) Ties 
+
+6) An attribute that can be broken down into smaller parts is called a(n) ________ attribute. 6) 
+A) simple B) composite C) associative D) complex 
+
+7) A join in which the joining condition is based on equality between values in the common 7) 
+
+columns is called a(n): 
+A) equi-join. B) uni-lateral join. 
+C) natural join. D) both A and C. 
+
+
+8) Which of the following will produce the minimum of all standard prices? 8) 
+
+A) Select standard_price from product_v where standard_price = min; 
+B) Select min(standard_price) from product_v; 
+C) Select standard_price from min(product_v); 
+D) Select min(standard_price) from product_v where standard_price = min(standard_price); 
+
+
+9) An entity that associates the instances of one or more entity types and contains attributes An entity that associates the instances of one or more entity types and contains attributes 9) 
+specific to the relationships is called a(n): 
+A) intersectional entity. B) associative entity. 
+C) connecting entity. D) all of the above. 
+10) In which of the following situations would one have to use an outer join in order to obtain the 10) 
+desired results? 
+A) A report is desired that lists all customers and the total of their orders. 
+B) A report is desired that lists all customers, the total of their orders during the most recent 
+month, and includes customers who did not place an order during the month (their total 
+
+will be zero). 
+C) A report is desired that lists all customers who placed an order. 
+D) There is never a situation that requires only an outer join. 
+
+11) A rule that CANNOT be violated by database users is called a: 
+A) constraint. B) program. C) password. D) view.
+
+12) What results would the following SQL statement produce? 
+
+select owner, table_name 
+from dba_tables 
+where table_name = 'CUSTOMER'; 
+
+
+A) An error message 
+B) A listing of the owner of the customer table 
+C) A listing of the owner of the customer table as well as customers 
+D) A listing of all customers in the customer table 
+
+13) Which of the following finds all groups meeting stated conditions? 
+A) Where B) Having C) Find D) Select 
+
+14) What result set will the following query return? 
+
+Select item_no 
+from order_v 
+where quantity > 10; 
+
+
+A) The order_id of all orders that had more than one item 
+B) The item_no of all orders that had more than 10 items 
+C) The item_no of all orders that had 10 or more items 
+D) The order_id of all orders that had more than 10 items 
+
+15) What does the following SQL statement do? What does the following SQL statement do? 15) 
+Delete from Customer_T 
+where state = 'HI'; 
+A) Removes the customer_t table from the database 
+B) Deletes all records from the customer_t table 
+C) Deletes all records from customer_t where the state is equal to HI 
+D) None of the above 
+16) In SQL, a(n) ________ subquery is a type of subquery in which processing the inner query 
+depends on data from the outer query. 
+A) correlated B) paired C) inner D) natural 
+16) 
+17) A database is an organized collection of ________ related data. 
+A) loosely B) logically C) physically D) badly 
+17) 
+18) To eliminate duplicate rows in a query, the ________ qualifier is used in the SQL Select 
+command. 
+A) distinct B) check C) alter D) specific 
+18) 
+19) A user view is: 
+A) what a user sees when he or she looks out the window. 
+B) a procedure stored on the server. 
+C) a table or set of tables. 
+D) a logical description of some portion of the database. 
+19) 
+20) Which of the following is an integrated decision support database with content derived from 
+various operational databases? 
+A) Data warehouse B) Corporate data structure 
+C) Relational DBMS D) Client-server system 
+20) 
+21) An attribute that can be calculated from related attribute values is called a(n) ________ 
+attribute. 
+A) simple B) derived C) composite D) multivalued 
+21) 
+22) Which of the following questions is answered by the SQL statement? 22) 
+Select Count (Product_Description) from Product_T; 
+A) How many characters are in the field name "Product_Description"? 
+B) How many products are in the Product Table? 
+C) How many different columns named "product Description" are there in table Product_T? 
+D) How many products have product descriptions in the Product Table? 
+
+3 
+
+
+
+23) What results will be produced by the following SQL query? What results will be produced by the following SQL query? 23) 
+Select sum(standard_price) as total_price 
+from product_v 
+where product_type = 'WOOD'; 
+A) The standard_price of the first wood product in the table 
+B) The standard_price of any wood product in the table 
+C) The total price of all products that are of type wood 
+D) The total price of all products 
+24) CASE is a class of tools that: 
+A) automates the design of databases and application programs. 
+B) provides management reporting tools. 
+C) assists the database administrator in maintaining a database. 
+D) provides guidelines for the physical design of a database. 
+24) 
+25) What will result from the following SQL Select statement? 25) 
+Select min(product_description) 
+from product_v; 
+A) An error message will be generated. 
+B) The first product description alphabetically in product_v will be shown. 
+C) The minimum value of product_description will be displayed. 
+D) None of the above. 
+26) An attribute of an entity that must have a value for each entity instance is a(n): 
+A) required attribute. B) fuzzy attribute. 
+C) composite attribute. D) optional attribute. 
+26) 
+27) Which of the following can produce scalar and vector aggregates? 
+A) Group By B) Sort C) Having D) Order By 
+27) 
+28) ________ takes a value of true if a subquery returns an intermediate results table which 
+contains one or more rows. 
+A) Exists B) Extents C) Having D) In 
+28) 
+29) A ________ specifies the number of instances of one entity that can be associated with each 
+instance of another entity. 
+A) cardinality constraint B) degree 
+C) limit D) counter constraint 
+29) 
+30) To get all the customers from Hawaii sorted together, which of the following would be used? 
+A) Group By B) Order By C) Having D) Sort 
+30) 
+31) ________ is a set of commands used to update and query a database. 
+A) DDL B) DPL C) DML D) DCL 
+31) 
+
+32) Which of the following is software used to create, maintain, and provide controlled access to 
+databases? 
+A) Attribute B) User view 
+C) Network operating system D) Database management system 
+
+33) The three-schema approach includes which of the following schemas? 
+A) Cross-functional B) Internal 
+C) Dissecting D) Logical 
+33) 
+34) One application of data warehouses is: 
+A) shipping of information. 
+C) decision support. 
+B) file updating. 
+D) order processing. 
+34) 
+35) A(n) ________ is often developed by identifying a form or report that a user needs on a regular 
+basis. 
+A) user view B) enterprise view 
+C) reporting document D) user snapshot 
+35) 
+36) What does the following SQL statement do? 36) 
+Alter Table Customer_T 
+Add (Type Varchar (2)); 
+A) Alters the Customer_T table to accept Type 2 Varchars 
+B) Alters the Customer_T table, and adds a field called "Type" 
+C) Alters the Customer_T table by adding a 2-byte field called "Varchar" 
+D) Alters the Customer_T table to be a Type 2 Varchar 
+37) What will be returned when the following SQL statement is executed? 37) 
+Select driver_no,count(*) as num_deliveries 
+from deliveries 
+group by driver_no; 
+A) A count of all of the deliveries made by all drivers 
+B) A listing of all drivers, sorted by driver number 
+C) A listing of each driver as well as the number of deliveries that he or she has made 
+D) None of the above 
+
+
+38) In the following diagram, which answer is true? 38In the following diagram, which answer is true? 38) 
+
+
+
+A) Each employee can supervise one to many employees. 
+B) Each employee can manage many departments. 
+C) Each employee works in more than one department. 
+D) All of the above. 
+39) A join operation: 
+A) is used to combine indexing operations. 
+B) causes two disparate tables to be combined into a single table or view. 
+C) brings together data from two different fields. 
+D) causes two tables with a common domain to be combined into a single table or view. 
+39) 
+40) An attribute in a relation of a database that serves as the primary key of another relation in the 
+same database is called a: 
+A) link key. B) foreign attribute. 
+C) link attribute. D) foreign key. 
+40) 
+41) Which of the following criteria should be considered when selecting an identifier? 
+A) Choose an identifier that doesn't have large composite attributes. 
+B) Choose an identifier that is stable. 
+C) Choose an identifier that will not be null. 
+D) All of the above. 
+41) 
+42) Older systems that often contain data of poor quality are called ________ systems. 
+A) legacy B) mainframe C) controlled D) database 
+42) 
+43) In the figure below, what type of key is depicted? 43) 
+
+
+A) Recursive foreign B) Primary 
+C) Composite D) Recursive primary 
+
+
+44) What does the following SQL statement do? What does the following SQL statement do? 44) 
+Select * From Customer Where Cust_Type = "Best" 
+A) Selects the "*" field from the Customer table for each row with a customer labeled "best" 
+B) Selects fields with a "*" in them from the Customer table 
+C) Selects all the fields from the Customer table for each row with a customer labeled "best" 
+D) Selects all the fields from the Customer table for each row with a customer labeled " *" 
+45) The UNION clause is used to: 
+A) find all rows that do not match in two tables. 
+B) join two tables together to form one table. 
+C) combine the output from multiple queries into a single result table. 
+D) none of the above. 
+45) 
+46) A student can attend five classes, each with a different professor. Each professor has 30 
+students. The relationship of students to professors is a ________ relationship. 
+A) one-to-one B) one-to-many 
+C) strong D) many-to-many 
+46) 
+47) The logical representation of an organization's data is called a(n): 
+A) relationship systems design. B) database entity diagram. 
+C) database model. D) entity-relationship model. 
+47) 
+48) An attribute that uniquely identifies an entity and consists of a composite attribute is called 
+a(n): 
+A) identifying attribute. B) relationship identifier. 
+C) composite identifier. D) composite attribute. 
+48) 
+49) Which of the following is true of the order in which SQL statements are evaluated? 
+A) The group by clause is processed before the where clause. 
+B) The select clause is always processed last. 
+C) The select clause is processed before the order by clause. 
+D) The select clause is always processed first. 
+49) 
+50) Data modeling may be the most important part of the systems development process because: 
+A) data are less stable than processes. 
+B) the data in a system are generally less complex than processes and play a central role in 
+development. 
+C) data characteristics are important in the design of programs and other systems 
+components. 
+D) it is the easiest. 
+50) 
+51) A graphical system used to capture the nature and relationships among data is called a(n): 
+A) ERD. B) data model. 
+C) hypertext graphic. D) logical data model. 
+51) 
+
+
+52) When a regular entity type contains a multivalued attribute, one must: 
+A) create a single relation with multiple lines for each instance of the multivalued attribute. 
+B) create two new relations, both containing the multivalued attribute. 
+C) create two new relations, one containing the multivalued attribute. 
+D) none of the above. 
+
+53) A two-dimensional table of data is called a: 
+A) group. B) set. C) declaration. D) relation. 
+53) 
+54) Which of the following is NOT an advantage of database systems? 
+A) Program-data independence B) Better data quality 
+C) Redundant data D) Reduced program maintenance 
+54) 
+55) A relationship where the minimum and maximum cardinality are both one is a(n) ________ 
+relationship. 
+A) mandatory one B) optional 
+C) mandatory link D) unidirectional 
+55) 
+56) A primary key that consists of more than one attribute is called a: 
+A) composite key. B) cardinal key. 
+C) foreign key. D) multivalued key. 
+56) 
+57) In the following diagram, which of the answers below is true? 57) 
+
+
+A) Each patient has one or more patient histories. 
+B) Each patient has one and only one visit. 
+C) Each patient history belongs to one and only one patient. 
+D) Both A and C 
+58) In the SQL language, the ________ statement is used to make table definitions. 
+A) create table B) create session C) select D) create index 
+58) 
+59) Which of the following is NOT an objective that drove the development and evolution of 
+database technology? 
+A) The need to provide greater independence between programs and data 
+B) The need to provide ever more powerful platforms for decision support applications 
+C) The desire to manage increasing complex data types and structures 
+D) The desire to require programmers to write all file handling functionality 
+59) 
+60) A workgroup database is stored on a central device called a(n): 
+A) server. B) network. C) client. D) remote PC. 
+60) 
+
+
+61) Databases may be more expensive to maintain than files because of: 
+A) backup and recovery needs. 
+B) the complexity of the database environment. 
+C) the need for specialized personnel. 
+D) all of the above. 
+
+62) In the following diagram, what type of relationship is depicted? 62) 
+
+
+A) Unary B) Ternary C) Binary D) Quad 
+63) Customers, cars, and parts are examples of: 
+A) relationships. B) entities. C) attributes. D) cardinals. 
+63) 
+64) What result will the following SQL statement produce? 64) 
+Select Avg(standard_price) as average from product_v; 
+A) The average standard_price of all products in product_v 
+B) The average price of all products 
+C) The average of all products in product_v 
+D) None of the above 
+
+
+65) What will be returned when the following SQL statement is executed? 65) What will be returned when the following SQL statement is executed? 65) 
+
+Select driver_no, count(*) as num_deliveries 
+from deliveries 
+where state = 'MA' 
+group by driver_no; 
+
+
+A) A listing of all drivers who made deliveries to state = 'MA', sorted by driver number 
+B) A listing of each driver who made deliveries to state = 'MA' as well as the number of 
+
+
+deliveries that each driver has made to that state 
+C) A count of all of the deliveries made to state = 'MA' by all drivers. 
+D) None of the above. 
+
+
+66) The traditional methodology used to develop, maintain and replace information systems is 66) 
+
+called the: 
+A) Unified Model B) Systems Deployment Life Cycle 
+C) Systems Development Life Cycle D) Enterprise Resource Model 
+
+
+67) A rule that states that each foreign key value must match a primary key value in the other 67) 
+
+relation is called the: 
+A) entity key group rule. B) referential integrity constraint. 
+C) key match rule. D) foreign/primary match rule. 
+
+
+68) Data that describe the properties of other data are: 
+
+A) logical. B) physical. 
+
+C) relationships. D) none of the above. 
+
+69) A person's name, birthday, and social security number are all examples of: 
+A) relationships. B) entities. C) descriptors. D) attributes. 
+
+70) Which of the following is the wildcard operator in SQL statements? 
+A)* B) = 
+C) <> D) & 
+
+
+71) Data processed in a way that increases a user's knowledge is: 
+A) text. B) hyperlink. C) graphics 
+
+D) information. 
+
+72) ________ is a component of the relational data model included to specify business rules to 72) 
+
+maintain the integrity of data when they are manipulated. 
+A) Data structure B) Business rule constraint 
+C) Data integrity D) Business integrity 
+
+
+73) ________ is a tool even non-programmers can use to access information from a database. 73) 
+A) ODBC B) Data manipulation query language 
+C) ASP D) Structured query language 
+
+74) A person, place, an object , an event or concept about which the organization wishes to 74) 
+maintain data is called a(n): 
+A) attribute. B) object. C) entity. D) relationship. 
+
+10 
+
+
+
+75) An entity type name should be all of the following EXCEPT: 
+A) a singular noun. B) concise. 
+C) specific to the organization. D) as short as possible. 
+
+76) In the figure below, the primary key for "Order Line" is which type of key? 76) 
+
+
+A) Foreign B) Grouped C) Standard D) Composite 
+
+
+11 
+
+
+
+77) In the figure below, what type of relationship is depicted? 77In the figure below, what type of relationship is depicted? 77) 
+
+
+
+A) One-to-many 
+C) Many-to-many 
+B) One-to-one 
+D) Unary 
+78) The SQL command ________ adds one or more new columns to a table. 
+A) create table B) alter table 
+C) create relationship D) create view 
+78) 
+79) For the relationship represented in the figure below, which of the following is true? 79) 
+
+
+A) An employee can work in more than one department but does not have to work for any 
+
+department. 
+B) A department must have at least one employee. 
+C) An employee has to work for more than one department. 
+D) A department can have more than one employee. 
+
+12 
+
+
+
+80) What does the following SQL statement do? What does the following SQL statement do? 80) 
+Update Product_T 
+Set Unit_Price = 775 
+Where Product_ID = 7 
+A) Updates the Product_T table to have a unit price of 775 
+B) Changes the unit price of Product 7 to 775 
+C) Changes the length of the Unit_Price field to 775 
+D) Changes the price of a unit called Product_T to 7 
+81) A data warehouse derives its data from: 
+A) various operational data sources. 
+C) reports. 
+B) a datamart. 
+D) on-line transactions. 
+81) 
+82) Languages, menus, and other facilities by which users interact with the database are 
+collectively called a(n): 
+A) user interface. B) icon. 
+C) development environment. D) client. 
+82) 
+83) The first in a series of steps to follow when creating a table is to: 
+A) identify each attribute and its characteristics. 
+B) identify columns that must be unique. 
+C) identify columns that must be null. 
+D) create an index. 
+83) 
+84) An attribute (or attributes) that uniquely identifies each row in a relation is called a: 
+A) primary key. B) column. C) foreign field. D) duplicate key. 
+84) 
+85) What result set is returned from the following query? 85) 
+Select customer_name, telephone 
+from customers 
+where city in ('Boston','New York','Denver'); 
+A) The customer_name of all customers living in Boston, New York or Denver 
+B) The customer_name and telephone of all customers 
+C) The customer_name and telephone of all customers living in Boston and New York and 
+Denver 
+D) The customer_name and telephone of all customers living in either Boston, New York or 
+Denver 
+86) The ________ states that no primary key attribute may be null. 
+A) entity integrity rule B) referential integrity constraint 
+C) partial specialization rule D) range domain rule 
+86) 
+
+
+
+
+
+1) D 
+
+Topic: Processing Single Tables 
+
+Subtopic: Using Ranges for 
+Qualification 
+
+2) B 
+
+Topic: 
+Internal Schema Definitions 
+in RDBMSs 
+
+Subtopic: Creating Indexes 
+
+3) D 
+
+Topic: 
+Basic Concepts and 
+Definitions 
+
+
+Subtopic: Data 
+
+4) D 
+
+Topic: 
+Modeling Entities and 
+Attributes 
+
+Subtopic: Attributes 
+
+5) C 
+
+Topic: The Database Approach 
+Subtopic: Data Models 
+
+6) B 
+
+Topic: 
+Modeling Entities and 
+Attributes 
+
+Subtopic: Attributes 
+
+7) D 
+
+Topic: Processing Multiple Tables 
+Subtopic: Equi-join 
+
+8) B 
+
+Topic: Processing Single Tables 
+Subtopic: Using Functions 
+
+9) B 
+
+Topic: Modeling Relationships 
+
+Subtopic: Basic Concepts and 
+Definitions in 
+Relationships 
+
+10) B 
+
+Topic: Processing Multiple Tables 
+Subtopic: Outer Join 
+
+11) A 
+
+Topic: 
+Advantages of the Database 
+Approach 
+
+Subtopic: Improved Data Quality 
+
+12) B 
+
+Topic: Data Dictionary Facilities 
+Subtopic: 
+
+13) B 
+
+Topic: Processing Single Tables 
+
+Subtopic: Qualifying Results by 
+Categories: The 
+HAVING Clause 
+
+14) B 
+
+Topic: Processing Single Tables 
+
+Subtopic: Using Comparison 
+Operators 
+
+
+15) C 
+
+Topic: Inserting, Updating, and 
+Deleting Data 
+Subtopic: Deleting Database 
+Contents 
+
+16) A 
+
+Topic: Processing Multiple Tables 
+Subtopic: Correlated Subqueries 
+
+17) B 
+
+Topic: 
+Basic Concepts and 
+Definitions 
+
+
+Subtopic: 
+
+18) A 
+
+Topic: Processing Single Tables 
+Subtopic: Using Distinct Values 
+
+
+19) D 
+
+Topic: 
+Advantages of the Database 
+Approach 
+
+Subtopic: Improved Data Sharing 
+
+20) A 
+
+Topic: 
+The Range of Database 
+Applications 
+
+Subtopic: Enterprise Applications 
+
+21) B 
+
+Topic: 
+Modeling Entities and 
+Attributes 
+
+Subtopic: Attributes 
+
+22) D 
+
+Topic: Processing Single Tables 
+Subtopic: Using Functions 
+
+23) C 
+
+Topic: Processing Single Tables 
+Subtopic: Using Expressions 
+
+24) A 
+
+Topic: 
+Components of the 
+Database Environment 
+
+Subtopic: 
+
+25) B 
+
+Topic: Processing Single Tables 
+Subtopic: Using Functions 
+
+26) A 
+
+Topic: 
+Modeling Entities and 
+Attributes 
+
+Subtopic: Attributes 
+
+27) A 
+
+Topic: Processing Single Tables 
+
+Subtopic: Categorizing Results: 
+The GROUP BY Clause 
+
+28) A 
+
+Topic: Processing Multiple Tables 
+Subtopic: Subqueries 
+
+29) A 
+
+Topic: Modeling Relationships 
+Subtopic: Cardinality Constraints 
+
+30) B 
+
+Topic: Processing Single Tables 
+
+Subtopic: Sorting Results: The 
+ORDER BY Clause 
+
+31) C 
+
+Topic: The SQL Environment 
+Subtopic: 
+
+32) D 
+
+Topic: 
+Components of the 
+Database Environment 
+
+Subtopic: 
+
+33) B 
+Topic: Three-Schema Architecture 
+for Database Development 
+Subtopic: 
+
+34) C 
+
+Topic: Introduction 
+Subtopic: 
+
+
+35) A 
+
+Topic: 
+Advantages of the Database 
+Approach 
+
+Subtopic: Improved Data Sharing 
+
+36) B 
+
+Topic: Defining a Database in SQL 
+
+Subtopic: Changing Table 
+Definitions 
+
+
+37) C 
+
+Topic: Processing Single Tables 
+
+Subtopic: Categorizing Results: 
+The GROUP BY Clause 
+
+38) A 
+
+Topic: Modeling Relationships 
+Subtopic: Multiple Relationships 
+
+39) D 
+
+Topic: Processing Multiple Tables 
+Subtopic: 
+
+40) D 
+
+Topic: The Relational Data Model 
+Subtopic: Relational Keys 
+
+41) D 
+
+Topic: 
+Modeling Entities and 
+Attributes 
+
+Subtopic: Identifier Attribute 
+
+14 
+
+
+
+Answer Key 
+Testname: CSCI-300 FINAL PRACTI Testname: CSCI-300 FINAL PRACTI 
+
+42) A 
+
+Topic: Introduction 
+Subtopic: Conversion Costs 
+
+43) A 
+
+Topic: Transforming EER 
+Diagrams into Relations 
+Subtopic: Unary One-to-Many 
+Relationships 
+
+44) C 
+
+Topic: Processing Single Tables 
+
+Subtopic: Clauses of the SELECT 
+Statement 
+
+45) C 
+
+Topic: Processing Multiple Tables 
+Subtopic: Combining Queries 
+
+46) D 
+
+Topic: Modeling Relationships 
+Subtopic: Degree of a Relationship 
+
+47) D 
+Topic: The E-R Model: An 
+Overview 
+Subtopic: 
+
+48) C 
+
+Topic: 
+Modeling Entities and 
+Attributes 
+
+Subtopic: Identifier Attribute 
+
+49) C 
+
+Topic: Processing Single Tables 
+Subtopic: 
+
+50) C 
+
+Topic: Introduction 
+Subtopic: 
+
+
+51) B 
+
+Topic: The Database Approach 
+Subtopic: Data Models 
+
+52) C 
+
+Topic: 
+Transforming EER 
+Diagrams into Relations 
+
+Subtopic: Multivalued Attributes 
+
+53) D 
+
+Topic: The Relational Data Model 
+
+Subtopic: Relational Data 
+Structure 
+
+
+54) C 
+
+Topic: The Database Approach 
+
+Subtopic: Advantages of the 
+Database Approach 
+
+55) A 
+
+Topic: Modeling Relationships 
+Subtopic: Cardinality Constraints 
+
+56) A 
+
+Topic: The Relational Data Model 
+Subtopic: Relational Keys 
+
+57) D 
+
+Topic: Modeling Relationships 
+Subtopic: Cardinality Constraints 
+
+58) A 
+
+Topic: Integrity Constraints 
+
+Subtopic: Creating Relational 
+Tables 
+
+59) D 
+
+Topic: 
+Evolution of Database 
+Systems 
+
+Subtopic: 
+
+60) A 
+
+Topic: The Range of Database 
+Applications 
+Subtopic: Two-Tier Client/Server 
+Databases 
+
+61) D 
+
+Topic: 
+Costs and Risks of the 
+Database Approach 
+
+Subtopic: 
+
+62) B 
+
+Topic: Modeling Relationships 
+Subtopic: Degree of a Relationship 
+
+63) B 
+
+Topic: 
+Modeling Entities and 
+Attributes 
+
+Subtopic: 
+
+64) A 
+
+Topic: Processing Single Tables 
+Subtopic: Using Expressions 
+
+65) B 
+
+Topic: Processing Single Tables 
+
+Subtopic: Categorizing Results: 
+The GROUP BY Clause 
+
+66) C 
+
+Topic: Database Development 
+Process 
+Subtopic: Systems Development 
+Life Cycle 
+
+67) B 
+
+Topic: Integrity Constraints 
+Subtopic: Referential Integrity 
+
+68) D 
+
+Topic: 
+Basic Concepts and 
+Definitions 
+
+Subtopic: Metadata 
+
+69) D 
+
+Topic: 
+Modeling Entities and 
+Attributes 
+
+Subtopic: Attributes 
+
+70) A 
+
+Topic: Processing Single Tables 
+Subtopic: Using Wildcards 
+
+71) D 
+
+Topic: 
+Basic Concepts and 
+Definitions 
+
+
+Subtopic: Data Versus Information 
+
+72) C 
+
+Topic: The Relational Data Model 
+Subtopic: Basic Definitions 
+
+73) D 
+
+Topic: 
+Advantages of the Database 
+Approach 
+
+Subtopic: Improved Data 
+Accessibility and 
+Responsiveness 
+
+74) C 
+
+Topic: The Database Approach 
+Subtopic: Data Models 
+
+75) D 
+
+Topic: Modeling Entities and 
+Attributes 
+Subtopic: Naming and Defining 
+Entity Types 
+
+76) D 
+
+Topic: The Relational Data Model 
+Subtopic: 
+
+77) C 
+
+Topic: Transforming EER 
+Diagrams into Relations 
+Subtopic: Map Binary 
+Many-to-Many 
+Relationships 
+
+78) B 
+
+Topic: Defining a Database in SQL 
+
+Subtopic: Changing Table 
+Definitions 
+
+
+79) D 
+
+Topic: Modeling Relationships 
+Subtopic: Cardinality Constraints 
+
+80) B 
+
+Topic: Inserting, Updating, and 
+Deleting Data 
+Subtopic: Updating Database 
+Contents 
+
+15 
+
+
+
+Answer Key 
+Testname: CSCI-300 FINAL PRACTI Testname: CSCI-300 FINAL PRACTI 
+
+81) A 
+
+Topic: 
+The Range of Database 
+Applications 
+
+Subtopic: Enterprise Applications 
+
+82) A 
+
+Topic: 
+Components of the 
+Database Environment 
+
+Subtopic: 
+
+83) A 
+
+Topic: Defining a Database in SQL 
+Subtopic: Creating Tables 
+
+84) A 
+
+Topic: The Relational Data Model 
+Subtopic: Relational Keys 
+
+85) D 
+
+Topic: Processing Single Tables 
+
+Subtopic: IN and NOT IN with 
+Lists 
+
+86) A 
+
+Topic: The Relational Data Model 
+Subtopic: Entity Integrity 
+
+

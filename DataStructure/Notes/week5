@@ -1,0 +1,95 @@
+Linked- Lists
+[ | | | | | ]
+to:
+[ ] [ ] [ ] [ ]
+
+Data Structure used for collecting a sequence of objects, 
+that allows efficient addition and removal of elements in the 
+middle of the sequence.
+program-sequence of employee objects->sorted by last name
+new employee is hired--> objects need to be inserted into the sequence-->
+array to store objects--> all objects following the new hire must be
+moved toward the end.
+if employee leave the company, object must be removed--> move all
+object back.
+suppose large number values--> long processing time.
+array-linked list sequence of nodes.
+each node stores a value and a reference to the next node.
+
+Linked List
+Nodes point to the next nodes.
+Reference=Pointers.
+inserts a new node into a linked list , only the neighboring
+node refernece need to be updtated/removed.
+speed++;
+element access is slow --;
+java library-linked-list class.
+LinkedList class-java.util.package generic class.
+example
+LinkedList<String>, LinkedList<Product>.
+
+direct access to the first an the last element in the List
+LinkedList<E>, Example methods:
+void addFirst(E obj)
+void addLast(E obj)
+E getFirst()
+E getLast()
+E removeFirst()
+E removeLast()
+
+Java Library -ListIterater type(access elements inside a LinkedList)
+ListIterater=blinking pointer type in words.
+
+|[D][H][R][T]
+[D]|[H][R][T]
+[D][J]|[H][R][T]
+Iterator--> pointing between 2 elements-->cursor between 2chars,
+listIterator() of the LinkedList class.
+LinkedList<String> employeeNames=...;
+ListIterator<String> iterator=employeeNames.ListIterator();
+iterate through a list of strings.
+iterator points before the first element, inserts behind the iterator.
+move the iterator: iterator.next();
+next()-throws a NoSuchElementException if you are already past the end of the list.
+call-hasNext() before calling next()--> it returns true if there is a next element.
+ex:
+if(iterator.hasNext())
+	iterator.next();
+returns the element that the iterator is passing.
+
+ex while(iterator.hasNext()){
+	String name=iterator.next();
+	...
+}
+if loop goes through whole thing use enhanced for loop.
+ex for(String name: employeeNames){
+	...
+}
+Nodes for LinkedList class, store 2 links: a)one to the next element
+											b)one to the previous.
+doubly LinkedList
+add()- adds an object after the iterator, then moves the iterator
+iterator.add("J");
+remove()-remove and returns the object that was returned by the last call
+to next or previous.
+ex: while(iterator.hasNext()){
+	String name=iterator.next();
+	if(name ...(true))
+		iterator.remove();
+		} 
+		
+java <LinkedListDemoTester>
+
+Implementing LinkedList
+Linked list class supplied by the java library create Linked List
+a node object stores and object and a reference.
+Methods of both the linked-list class and the iterator calls have access
+to the node.  instance variables!=private.
+None of the linked list methods return a Node object--> instance variables 
+are public.
+review inner classes.
+java<LinkedList>
+//LinkedLIst class holds a reference 1st to the first node or null,
+if linked list is empty.
+addFirst()-add a new node to the list ,it becomes the head of the list
+and the node that was the old list head becomes its next node.

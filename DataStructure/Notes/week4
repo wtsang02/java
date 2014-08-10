@@ -1,0 +1,158 @@
+public void sort(int from,int to){
+	if(from>=to) return;
+	int p=partition(from,to);
+	sort(from,to);
+	sort(p+1,to);
+	}
+private int partition(int from,int to){
+	int pivot=a[from];
+	int j=to+1;
+	int i=from;
+	while(i<j){
+		i++;
+		while(a[i]<pivot)i++;
+			j--;
+			while(a[j]>pivot)j--;
+			if(i<j)
+				swap(i,j);
+		}
+		return j;
+	}
+return to partiontion a range
+
+steps
+1.pick element from the range-->pivot
+2.first element from the range a[from]-->pivot
+3.2 regions a[from]...a[i],consisting of values as most 
+as large as the pivot and a[j]...a[to], consisting of values at least as large as the pivot.
+4. region a[i+1]...a[j-1]-->values that have not be analzed
+
+<=pivot          not analyzed        >=pivot
+[][  ] []        [           ]       [][    ][]
+[from]  [i]                          [j]     [to]
+partitioning arange
+
+5.at the beginning left and right arease are nearly empty
+i=from-1 and j=to+1
+6.incrementing i while a[i]<pivot and decrementing j while a[j]>pivot
+
+<=pivot   <pivot             not analyzed                   >pivot         >=pivot
+[   ][  ]  [  ]  []             [           ]   []        [    ]         [       ][ ]
+[from]           [i](>=pivot)                [j](<=pivot)                         [to]
+
+
+private int partition(int from,int to){
+int pivot=a[from];
+int j=to+1;
+while(i<j){
+i++;
+while(a[i]<pivot)i++;
+j--;
+while(a[j]>pivot)j--;
+if(i<j)
+swap(i,j);
+}
+return j;
+}
+
+
+Searching
+Find a number in a sequence of values that occur in 
+arbitrar order-->linear or sequential search
+How long does a Linear search take?
+suppose element v is present in array 
+a-->avg search visits n/2 elements n-length of the array
+O(n)
+a Linear search locates a value in an array in O(n)steps.
+
+
+Binary Search
+Search for an item in a data already sorted in data sequence that has been sorted.
+
+1 5 8 9 12 17 20 32
+[0]              [7]
+
+1. narrow search-->1st or 2nd half of the array
+2. 1st half (data set)--> a[3=9
+3.  9<15-->look-->2nd half
+ 4   12  17  20 32
+    [4]..      [7]
+   one least value of the 1st half of this sequence is 9
+   5. 12<15
+   6. look in the 2nd half -->17
+   15!=17
+   don't have 15 in data set
+   Binary search--> cut the size of the search in half each step.
+   number of visits: T(n)=T(n/2)+1; T(n//2)=(n/4)+1
+   T(n)=T(n/4)+2;T(n)=T(n/2^k)+k
+   n=2^m-->m=log^2(n)-->T(n)=1+log^2(n)
+   Binary Search Speed--> Omega(log(n))
+   ex n=100 after each search:50,25,12,6,3,1
+   log^2(100)6.64  2^6.64=128
+   binary search>>linear search 
+   sort the array first,then use the binary search.
+   if you search the array only once, then it is more efficient
+   to pay for a Omega(n) linear search than for an Omega(n log(n)) sort
+   and an Omega(log(n))binary search.
+   Making many searches in the same array then sorting is worthwhile.
+   Array Class--> static binarySearch() that implements the binary search.
+   if the value is not found in the array then the return value != -1 but will be
+    -k-1 where k is the postion before which the elements should be inserted.
+    
+    int[] a={1,4,9};
+    int v=7;
+    int pos=Arrays.binarySearch(a,v);
+    //returns -3; v should be inserted before position 2.
+    search() returns the position of the match if the search succeeds, or -1
+    if v is not found in a.
+    
+    
+    Sorting Real Data
+    Array class supplies a static sort() for sorting 
+    arrays of objects.
+    Array class cannot know how to compare arbitrary objects.
+    
+    ex. array of coin objects
+    not obvious how the coins should be sorted
+    sort by names or values.
+    required: objects belong to classes that implements comparable interface.
+    (Comparable interface)
+    ex call
+    a.compareTo(b);
+    if a should come before b--> return neg#
+    if a and b are the same-->0
+    pos# otherwise
+    
+    java library: String and Data classes implement the Comparable interface
+    														--->you own class
+    														
+   ex: sort a collection of coin
+   
+   
+public class Coin implements Comparable{
+	public int compareTo(Object otherObject){
+		Coin other=(Coin)otherObject;
+		if(value<other.value)
+			return -1;
+		if(value==other.value)
+			return 0;
+		return 1;
+	}
+}
+
+implement compareTo() of Comparable interface-->method must define a total order 
+relationship.
+3 properties:
+	Antisymmetric: if a.compareTo(b)<=0 then b.compareTo(a)>=0
+	Reflexive: a.compareTo(a)=0
+	Transite:if a.compareTo(b)<=0 and b.compareTo(c)<=0 
+		then a.compareTo(c) <=0
+
+Coin class implements the Comparable interface-->pass an array of coins to the Arrays.sort()
+Coin[] coins=new Coin[n];
+//add coins
+..
+Arrays.sort(coins);
+practical matter: use sorting and searching methods in 
+the Arrays and Collection Classes.
+different algorithms vary in performance.

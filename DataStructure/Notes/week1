@@ -1,0 +1,106 @@
+Recursion
+Break up complex computational problem into simple ones.
+triangle Numbers
+Compute the area of a triangle of width n, assuming that each [] square has area 1.
+[]
+[][]
+[][][]
+the 3rd triangle number  = 6
+public class Triangle {
+public Triangle ( int aWidth) {
+width = aWidth;
+}
+public int getAria(){
+
+if ( width == 1) return 1;
+Triangle smallerTriangle = new Triangle ( width -1);
+int smallerArea = smallerTriangle.getArea();
+return smallerArea+width;
+}
+(instance field only show private)
+private int width;   }
+width = 1 => area 1
+public int getArea() {
+if ( width == 1) return 1;
+
+[]
+[][]
+[][][]
+[][][][]
+Suppose: we knew the area of the smaller triangle
+smallerArea  + width
+Triangle smallerTriangle = new Triangle ( width -1);
+int smallerArea = smallerTriangle.getArea();
+width = 4
+1.	getArea() make a smaller triangle of width 3.
+2.	calls getArea on that triangle.
+3.	getArea() make a smaller triangle of width 2.
+4.	calls getArea on that triangle.
+5.	getArea() make a smaller triangle of width 1
+6.	smallerTriangle.getArea();
+method return 1
+smallerArea + width = 1+2=3
+smallerArea + width = 3+3 = 6
+smallerArea + width = 6+4 = 10
+recursive solution
+every recursive call must simplify the computation in some way.
+public class Triangle {
+public Triangle ( int aWidth) {
+width = aWidth;
+}
+public int getArea(){
+if (width<0) return 0;
+if (width ==1) return 1;
+Triangle smallerTriangle = new Triangle( width-1);
+int smallerArea = smallerTriangle.getArea();
+return smallerArea+width;
+}
+private int width;
+}
+import java.util.Scanner;
+public class Triangle TriangleTester{
+public static void main (String[] args){
+Scanner in = new Scanner (system.in);
+System.out.print (¡°Enter width:¡±);
+int width = in.nextInt();
+Triangle t = new Triangle (width);
+int area = t.getArea();
+system.out.printn(¡°Area=¡± +area);
+}}
+output: Enter width: 10 
+	Area = 55
+Permutations
+all permutations of a String
+ex: ¡°eat¡± , ¡°eta¡±, ¡°aet¡±, ¡°ate¡±, ¡°tea¡±, ¡°tae¡±
+important java.util.ArrayList;
+public class PermutationGenerator{
+public PermutationGeneratio (String aWord){
+word = aWord;
+}
+public ArrayList <String> getPermutations()
+{
+ArrayList <String>result = new ArrayList<String>();
+if (word.length = = 0) {
+result.add(word);
+return result;
+}
+for ( int i < 0 word.length;  i++){
+String shorterWord = word.subString (0, i) + word.subString( i+1); // remove the ith character
+PermutationGenerator shorterPermutationGenerator = new PermutationGerator (shorterWord); //generate all permutations
+ArrayList<String> shorterWordPermutation = shorterPermutationGenerator.getPermutations();
+for (String s: shorterWordPermutations) {
+result.add (word.charAt (i) + s);
+}}
+return result;
+}
+private String word; 
+}
+import java.util.ArrayList;
+public class PermutationGeneratorTester {
+public static void main (String [] args) {
+PermutationGenerator generator = new PermutationGenerator(¡°eat¡±);
+ArrayList<String> permutations = generator.getPermutation();
+for (String s : permutations){
+System.out.print(s);
+} } }
+

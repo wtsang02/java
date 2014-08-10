@@ -1,0 +1,126 @@
+
+week2
+import java.util.Scanner;
+public class FibTester
+public static void main(String[]args){
+	Scanner in=new Scanner(System.in);
+	System.out.print("Enter n:");
+	int n=in.netInt();
+	for(int i=1;i<=n;i++){
+		long f=fib(i);
+		System.out.println(fib("+i+")="+f);
+		}
+	}
+public static long fib(int n){
+	if(n<=2) return 1;
+	else return fib(n-1)+fib(n-2);
+	}
+}
+
+
+public static long fib(int n){
+System.out.println("Entering fib:n="+n);
+long f;
+if(n<=z) f=1;
+else f=fib(n-1+fib(n-2);
+System.out.println("Exiting fibs n="+n+"return value="+f);
+return f;
+}
+}
+//trace msg into the method
+
+
+toolong!
+
+solution
+
+import java.util.Scanner;
+public class FibTester2{
+public static void main(String[]args){
+Scanner in=new Scanner(System.in);
+System.out.print("Enter n:");
+int n=in.nextInt();
+for(int i=1;i<=n;i++){
+long f=fib(i);
+System.out..println("fib("+i+")="+f);
+}//+fibtester2
+}
+
+Sorting and Searching
+Selection Sort: sorting algorithm rearranges the 
+elements of a collection so that they are sorted 
+in sorted order
+ex:sort an array of integers
+11 9 17 5 12
+a[0]   a[3]
+5 9 11 12 17
+Methods needed:
+1.an array with random enteiesr
+2.print the values of an array--no repetition
+
+profiling the selection sort algorithm
+measure the performance of program--> StopWatch class
+	System.currentTimeMillis()-->ms
+	public class StopWatch{
+	public StopWatch(){
+	reset();
+	}
+public void start(){
+if(isRunning)
+return;
+isRunning=true;
+long StarTime=System.currentTimeMillis();
+}
+public void stop(){
+if(!isRunning)
+return;
+isRunning=false;
+long endTime=System.currentTimeMillis();
+elapsedTime=elapsedTime+endTime-startTime;
+}
+public long getEleapsedTime(){
+if(isRunning)
+long endTime=System.currentTimeMillis();
+return elapsedTime+endTime-startTime();
+else
+return elapsedTime;
+
+
+
+Time before sorting and slopping the stopwatch just after, 
+you don't count the time it takes to initialize the array or the during which 
+the program waits for the user to type in the n.
+
+Analyzing the performace of the selection sort algorithm
+#of operations->sorting an array->selection sort
+count how often an array element is visited.
+each visit :amount of work
+let n->size of the array
+1find the smallest of n numbers
+2 visit n array elements
+3 swap elements->takes two visits
+4.visit only n-1 elements to find teh min.
+(n(n+1)/2)-1+(n-1)x2=total number of visist
+(n-2) elements are visited to find the min.
+each step: 2 visit to swap elements
+because 1+2...+(n-1)+n=n((n+1)/2)
+multiplying out and collecting terms of n
+((1/2)n^2)+(5/2)n+3=number of visit
+quadratic eq in n>parabola
+exn=1000--->500000
+ex: sorting an arry of 2000 numbers requires 4 times as many visit
+as solving an arry of 1000.
+the number of visits is of order n^2
+n^2->O(n^2) , big Oh notation
+array doubles;
+(2n)^2=4n^2
+f(n)O(g(n))->f grows no faster than g
+fastest growing term
+doubling the size of the array causes a fourfold increase in the time required
+for sorting it with selection sort.
+size of the array increases by a factor 100, thaat means sorting time increase by factor
+of 10000, that means, sort an array of 1 000 000 entries-> it will take 10,000 time longer
+as sorting 10 000 entries.
+ex:10,000 entries->in about 0.75 sec, 1 000 000 entries-->2hrs
+too long , it is a problem.
+

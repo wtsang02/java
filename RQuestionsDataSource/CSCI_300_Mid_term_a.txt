@@ -1,0 +1,408 @@
+CSCI-300 Test #2 Mid-term Part 1 -300 Test #2 Mid-term Part 1 
+
+Name___________________________________ 
+
+MULTIPLE CHOICE. Choose the one alternative that best completes the statement or answers the question. 
+
+1) ________ is a set of commands used to update and query a database. 1) 
+A) DPL B) DCL C) DDL D) DML 
+
+2) What does the following SQL statement do? 2) 
+
+Update Product_T 
+Set Unit_Price = 775 
+Where Product_ID = 7 
+
+
+A) Changes the unit price of Product 7 to 775 
+B) Changes the length of the Unit_Price field to 775 
+C) Updates the Product_T table to have a unit price of 775 
+D) Changes the price of a unit called Product_T to 7 
+
+
+3) To get all the customers from Hawaii sorted together, which of the following would be used? 3) 
+A) Order By B) Sort C) Having D) Group By 
+
+4) Which of the following is software used to create, maintain, and provide controlled access to 4) 
+
+databases? 
+A) Network operating system B) Attribute 
+C) Database management system D) User view 
+
+
+5) One major advantage of the outer join is that: 5) 
+A) the query is easier to write. B) information is easily accessible. 
+C) information is not lost. D) all of the above. 
+
+6) What result set is returned from the following query? 6) 
+
+Select customer_name, telephone 
+from customers 
+where city in ('Boston','New York','Denver'); 
+
+
+A) The customer_name and telephone of all customers living in Boston and New York and 
+Denver 
+B) The customer_name and telephone of all customers living in either Boston, New York or 
+
+Denver 
+C) The customer_name and telephone of all customers 
+D) The customer_name of all customers living in Boston, New York or Denver 
+
+7) To eliminate duplicate rows in a query, the ________ qualifier is used in the SQL Select 7) 
+command. 
+A) alter B) distinct C) check D) specific 
+
+1 
+
+
+
+8) In an SQL statement, which of the following parts states the conditions for row selection? 
+A) Where B) Select C) From D) Group By 
+
+9) Indexes are created in most RDBMSs to: 
+A) increase the cost of implementation. 
+B) decrease the amount of disk space utilized. 
+C) provide rapid random and sequential access to base-table data. 
+D) provide a quicker way to store data. 
+9) 
+10) A rule that CANNOT be violated by database users is called a: 
+A) view. B) password. C) program. D) constraint. 
+10) 
+11) In which of the following situations would one have to use an outer join in order to obtain the 
+desired results? 
+A) A report is desired that lists all customers who placed an order. 
+B) A report is desired that lists all customers and the total of their orders. 
+C) A report is desired that lists all customers, the total of their orders during the most recent 
+month, and includes customers who did not place an order during the month (their total 
+will be zero). 
+D) There is never a situation that requires only an outer join. 
+11) 
+12) What will be returned when the following SQL query is executed? 12) 
+Select driver_no, count(*) as num_deliveries 
+from deliveries 
+group by driver_no 
+having count(*) > 2; 
+A) A listing of the number of deliveries greater than 2 
+B) A listing of all drivers 
+C) A listing of all drivers who made more than 2 deliveries as well as a count of the number 
+of deliveries 
+D) A listing of all drivers who made more than 2 deliveries 
+13) Which of the following questions is answered by the SQL statement? 13) 
+Select Count (Product_Description) from Product_T; 
+A) How many different columns named "product Description" are there in table Product_T? 
+B) How many products are in the Product Table? 
+C) How many characters are in the field name "Product_Description"? 
+D) How many products have product descriptions in the Product Table? 
+14) ________ takes a value of true if a subquery returns an intermediate results table which 
+contains one or more rows. 
+A) Extents B) Exists C) Having D) In 
+14) 
+
+2 
+
+
+
+15) What will result from the following SQL Select statement? What will result from the following SQL Select statement? 15) 
+Select min(product_description) 
+from product_v; 
+A) The first product description alphabetically in product_v will be shown. 
+B) An error message will be generated. 
+C) The minimum value of product_description will be displayed. 
+D) None of the above. 
+16) What results will be produced by the following SQL query? 16) 
+Select sum(standard_price) as total_price 
+from product_v 
+where product_type = 'WOOD'; 
+A) The total price of all products 
+B) The total price of all products that are of type wood 
+C) The standard_price of the first wood product in the table 
+D) The standard_price of any wood product in the table 
+17) E. F. Codd developed the relational model in the: 
+A) 1970s. B) 1990s. C) 1960s. D) 1980s. 
+17) 
+18) Data that describe the properties of other data are: 
+A) relationships. B) logical. 
+C) physical. D) none of the above. 
+18) 
+19) Which of the following finds all groups meeting stated conditions? 
+A) Where B) Select C) Having D) Find 
+19) 
+20) What result set will the following query return? 20) 
+Select item_no 
+from order_v 
+where quantity > 10; 
+A) The item_no of all orders that had more than 10 items 
+B) The item_no of all orders that had 10 or more items 
+C) The order_id of all orders that had more than 10 items 
+D) The order_id of all orders that had more than one item 
+21) Which of the following will produce the minimum of all standard prices? 
+A) Select min(standard_price) from product_v; 
+B) Select standard_price from min(product_v); 
+C) Select min(standard_price) from product_v where standard_price = min(standard_price); 
+D) Select standard_price from product_v where standard_price = min; 
+21) 
+
+3 
+
+
+
+22) Which of the following is true of the order in which SQL statements are evaluated? 
+A) The select clause is always processed last. 
+B) The group by clause is processed before the where clause. 
+C) The select clause is always processed first. 
+D) The select clause is processed before the order by clause. 
+
+23) What will be returned when the following SQL statement is executed? 23) 
+Select driver_no, count(*) as num_deliveries 
+from deliveries 
+where state = 'MA' 
+group by driver_no; 
+A) A listing of each driver who made deliveries to state = 'MA' as well as the number of 
+deliveries that each driver has made to that state 
+B) A listing of all drivers who made deliveries to state = 'MA', sorted by driver number 
+C) A count of all of the deliveries made to state = 'MA' by all drivers. 
+D) None of the above. 
+24) What does the following SQL statement do? 24) 
+Delete from Customer_T 
+where state = 'HI'; 
+A) Deletes all records from the customer_t table 
+B) Removes the customer_t table from the database 
+C) Deletes all records from customer_t where the state is equal to HI 
+D) None of the above 
+25) A type of query that is placed within a WHERE or HAVING clause of another query is called 
+a: 
+A) master query. B) superquery. C) multi-query. D) subquery. 
+25) 
+26) A join in which rows that do not have matching values in common columns are still included 
+in the result table is called a(n): 
+A) union join. B) natural join. C) outer join. D) equi-join. 
+26) 
+27) What will be returned when the following SQL statement is executed? 27) 
+Select driver_no,count(*) as num_deliveries 
+from deliveries 
+group by driver_no; 
+A) A listing of all drivers, sorted by driver number 
+B) A listing of each driver as well as the number of deliveries that he or she has made 
+C) A count of all of the deliveries made by all drivers 
+D) None of the above 
+
+4 
+
+
+
+28) ________ is a set of commands used to control a database, which includes security. 
+A) DDL B) DPL C) DML D) DCL 
+
+29) What result will the following SQL statement produce? 29) 
+Select Avg(standard_price) as average from product_v; 
+A) The average of all products in product_v 
+B) The average standard_price of all products in product_v 
+C) The average price of all products 
+D) None of the above 
+30) Which of the following is an integrated decision support database with content derived from 
+various operational databases? 
+A) Corporate data structure B) Data warehouse 
+C) Client-server system D) Relational DBMS 
+30) 
+
+ 
+
+
+
+1) D 
+
+Topic: The SQL Environment 
+Subtopic: 
+
+2) A 
+
+Topic: Inserting, Updating, and 
+Deleting Data 
+Subtopic: Updating Database 
+Contents 
+
+3) A 
+
+Topic: Processing Single Tables 
+
+Subtopic: Sorting Results: The 
+ORDER BY Clause 
+
+4) C 
+
+Topic: 
+Components of the 
+Database Environment 
+
+Subtopic: 
+
+5) C 
+
+Topic: Processing Multiple Tables 
+Subtopic: Outer Join 
+
+6) B 
+
+Topic: Processing Single Tables 
+
+Subtopic: IN and NOT IN with 
+Lists 
+
+7) B 
+
+Topic: Processing Single Tables 
+Subtopic: Using Distinct Values 
+
+
+8) A 
+
+Topic: Processing Single Tables 
+
+Subtopic: Clauses of the SELECT 
+Statement 
+
+9) C 
+
+Topic: 
+Internal Schema Definitions 
+in RDBMSs 
+
+Subtopic: Creating Indexes 
+
+10) D 
+
+Topic: 
+Advantages of the Database 
+Approach 
+
+Subtopic: Improved Data Quality 
+
+11) C 
+
+Topic: Processing Multiple Tables 
+Subtopic: Outer Join 
+
+12) C 
+
+Topic: Processing Single Tables 
+
+Subtopic: Qualifying Results by 
+Categories: The 
+HAVING Clause 
+
+13) D 
+
+Topic: Processing Single Tables 
+Subtopic: Using Functions 
+
+14) B 
+
+Topic: Processing Multiple Tables 
+Subtopic: Subqueries 
+
+15) A 
+
+Topic: Processing Single Tables 
+Subtopic: Using Functions 
+
+16) B 
+
+Topic: Processing Single Tables 
+Subtopic: Using Expressions 
+
+17) A 
+
+Topic: 
+Evolution of Database 
+Systems 
+
+Subtopic: 
+
+18) D 
+
+Topic: 
+Basic Concepts and 
+Definitions 
+
+Subtopic: Metadata 
+
+19) C 
+
+Topic: Processing Single Tables 
+
+Subtopic: Qualifying Results by 
+Categories: The 
+HAVING Clause 
+
+20) A 
+
+Topic: Processing Single Tables 
+
+Subtopic: Using Comparison 
+Operators 
+
+
+21) A 
+
+Topic: Processing Single Tables 
+Subtopic: Using Functions 
+
+22) D 
+
+Topic: Processing Single Tables 
+Subtopic: 
+
+23) A 
+
+Topic: Processing Single Tables 
+
+Subtopic: Categorizing Results: 
+The GROUP BY Clause 
+
+24) C 
+
+Topic: Inserting, Updating, and 
+Deleting Data 
+Subtopic: Deleting Database 
+Contents 
+
+25) D 
+
+Topic: Processing Multiple Tables 
+Subtopic: Subqueries 
+
+26) C 
+
+Topic: Processing Multiple Tables 
+Subtopic: Outer Join 
+
+27) B 
+
+Topic: Processing Single Tables 
+
+Subtopic: Categorizing Results: 
+The GROUP BY Clause 
+
+28) D 
+
+Topic: The SQL Environment 
+Subtopic: 
+
+29) B 
+
+Topic: Processing Single Tables 
+Subtopic: Using Expressions 
+
+30) B 
+
+Topic: 
+The Range of Database 
+Applications 
+
+Subtopic: Enterprise Applications 
+
+
+
+
+

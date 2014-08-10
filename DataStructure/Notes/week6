@@ -1,0 +1,147 @@
+public class linkedList(){
+
+remove the 1st element of the list: data of the 1st node are saved and
+later returnded as the method result.
+Successor of the 1st node becomes the 1st node of shorter list
+no reference to the old node--> garbage collector will recycle it.
+Iterator class.ListIterator interface-->library-->9methods.
+
+LinkedList class define a private inner class LinkedListItererator-->
+implements the simplified ListIterator interface.
+LinkedListIterator-->inner class-->access to private features of the LinkedList class.
+<LinkedList>.java.
+
+1 iterator object--> reference position to the last
+visited node
+2 reference to the last node before that--> adjust the links in the remove()
+position reference is advanced to position.next and the add position is remember
+in previous.if the iterator points before the 1st element--> old position is null
+and position must be set to first.
+
+iterator is not yet at the end of the list iterator is at the end
+if the list is empty (first==null);
+iterator is not yet at the end of the list
+iterator is at the end if the list is empty--> first==null
+if there is no element after the current position--> position-->
+position.next==null;
+
+remove the 1st element-->call removeFirst()
+in the middle of the list that must be removed and the
+node preceding needs its next reference updated to skip the removed element.
+in java it is illegal to call remove() twice in a row;
+remove()sets the previous reference to position.
+
+set() changes the data stored in the preciously visted elements.
+Linked List Traverse in only one direction. that means that the last iterator movement
+was forward or backward.
+In java, it is not allowed a call to the set() method following an add() or remove();
+
+addition of a node: insert the new node after the current
+position and set the successor of the new node to 
+the successor of the current position
+--------------------------------------------------------------------------------
+Abstract and Concrete Data Types
+Two ways looking at a linked list
+1)a sequence of node objects with links between them.
+2) abstract concept ordered sequence of data items that can be traversed with an iterator.
+two ways looking at an ArrayList
+2)concrete implementation:
+partially filled array of object references;
+Array List is an ordered sequence of data items, each
+of which can be accuessed by interger index.
+Linklist!=arrayList
+ArrayList allows random Access to all elements. int index.
+you can get or set the element ex:
+public class ArrayList(){
+	public ArrayList(){
+		public Object get(int index){...}
+		public void set(int index,Object value){...}
+		}
+	
+	LinkedList=> allows sequctial access
+	needs an iterator-traverse the list elements one at a time
+	ex:100th element-->skip all elements before it.
+	public class LinkedList{
+		public ListIterator listIterator(){...}
+		}
+		need interface:
+		public Interface ListIterator{
+		Object next();
+		boolean hasNext();
+		void add(Object value);
+		void remove();
+		void set(Object value):
+		..
+		}
+	ex:
+	remove,add elements in the arrayList
+	moving all elements beyond the insert or removal index, calling
+	get(),set() multiple times.
+	arraylist--> add/remove elements in the middle =slow
+	linkedlist=>access any element=inefficient repeated sequetail access.
+	
+	abstract data types: array and the list
+	Java Library:
+	ArrayList and LinkedList provide implemention for the arraylist and list.
+	efficiency:
+		LinkedList an element can be added/removed in constant time(iterator is in the
+		right position)
+		fixed# of node references need to be changed to add/remove.
+		An operation that requires a bounded amount of time-->Omeaga(1)
+		arrayList, using randomAccess-->Omeaga(1)
+		adding/removing in an ArrayList-->O(n) 
+		n=size of array list,since the avg n/2 elements need to be moved.
+		Linked list Random Access-->O(n),since the avg n/2 elements need to be
+		skipped.
+		
+	Why consider abstract data types?
+	ex: suppose: sorted collection of items--> locate items using binary search.
+	BS: makes RA to the middle of the collection, followed by other RAs
+	array: supports fast RA, Linked List does not , therefore implementation of
+	abstract array data type are needed.
+	Operation                  Array LinkedList
+	RA                          O(1)    O(n)
+	Linear traversal step       O(1)    O(1)
+	add/remove element          O(n)    O(1)
+---------------------------------------------------
+Stack      in=push(),out=pop()
+|     |
+|     |
+|  C  |<---C(3rd in, 1st out)
+|  B  |<---B(2nd in, 2nd out)
+|__A__|<---A(1st in, 3rd out)
+Java Library: abstract stack class-->array
+ex Stack<String> s=new Stack<String>();
+s.push("A");
+s.push("B");
+s.push("C");
+while(s.size()>o)
+System.out.println(s.pop());
+---------------------------------------------------
+Queue
+add()____C__B__A--->_____________________________remove()
+tail                                               head
+first in, first out.
+ex: printers
+multithreaded programs.
+public class LinkedListQueue{
+public LinkedListQueue(){
+	list=new LinkedList();
+}
+public void add(Object x){
+	list.addLast(x);
+}
+public Object remove(){
+return list.removeFirst();
+}
+int size(){
+return list.size();
+}
+private LinkedList list;
+}
+implement queue efficiently:
+circular array: all elements stay at the position at which
+they where inserted, but the index values that denote the head and tail
+of the queue change when elements are added and removed.
+
+		

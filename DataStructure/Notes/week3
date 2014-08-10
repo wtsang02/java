@@ -1,0 +1,88 @@
+Insertion Sort
+assume that the ininiial sequence a[0] a[1]...a[k]
+aay
+11 9 16 5 7
+add a[1]=9 insert before 11
+a[3] a[4] appear at beginning
+5 7 9 11 16
+
+code insertion sort.java
+
+efficienct 
+total number of visists= O(n^2)
+insertionsort--> performance is O(n)-->if the array is sorted
+f(n)=O(g(n))=>f grows no faster than g
+f can grow much slower.
+//$=omega
+f(n)=g((n)) =>$f grows at least as fast as g.
+f(n)+5n-3 is $(n^2)
+f(n)=0(g(n))=>f and g grow at same rate.
+
+Merge Sort
+10 int
+
+5 9 10 12 17 -->sorted
+1 8 11 20 32 -->sorted
+merge them to 1
+taking a new element from the first or second sub array 
+and choosing the smaller of the elements each time.
+
+if computer keep dividing the array into smaller and smaller
+sub arrays, sorting e3ach half and merging them back together
+the merge sort sorts the array by cutting the array in half
+recursivly sorting each half and then merging the sorted halves.
+
+copy array/ clone array.
+
+Analyzing the Merge Sort Algorithm
+n	Merge Sort Selection Sort
+10k		31		772
+20k		47		3051
+30k		62		6846
+
+1. Each step merge process adds one more element to a.
+2. first or second--> two halves --> compared
+3. visits -->3n visits total; n: length of a.
+4. at the beginning we had to copy from a to first and second-->2n visits=5n total visits.
+let (n): #of visits required to sort a range of n elements
+T(n)T(n/2)+T(n/2)+5n
+sorting each half~ T(n/2) visits.
+if n!= even--> one sub array of site ((n-1)/2) and ((n+1)/2)
+assume: n is a power of 2--> n=2m sub-arrays evenly divided into 2 parts.
+T(n)=2T(n/2)+5n
+
+T(n/2)=2T(n/4)+5(n/2);
+T(n)=2*2T(n/4)+5n+5n;
+T(n/4)=2T(n/8)+5(n/4).....
+n=2^m we have m=log^2(n)
+growth order: drop the lower order term n-->5nlog^2(n)
+gets, O(nlog(n))
+O(n^2)<O(nlog(n))
+100^2=10,00 times as long to sort million 
+records as it took to sort 10 000 reordes with the O(n^2)
+
+O(nlog(n)) ratio:  ratio, 1 000 000 log(1 000 000)/10 000 log(10 0000) = 10(6/4)= 150
+ex sort an array of 10 000 integer that is 0.75 sec
+0.75 sec x 150 = under 2 min comparted to 2 hrs.
+
+Java programs. Arrays class--> static sort()--> Sort arrays of int
+int[] a=...i
+Arrays.sort(a); --> Quicksort algorithm.
+
+
+Quick Sort Algorithm
+no temporary arrays are required to sort and merge the partial results
+idea, divide and conquer
+	Sort a range a[from]..a[to] of the array a.
+	1. rearrange the elements in the range so that no elements
+	in the range a[from]... a[p] is larger than any element in the range.
+	a[p+1]...a[to]--> partition the range.
+	2. [ 5 3 2 6 4 1 3 7 ]
+	   [ 3 3 2 1 4|6 5 7 ]
+	   sort each partition by recursivly applying the same algorthm
+	   on the 2 partitions
+	   Sort the entire range, because the largest element in the first partition
+	   is at most as large as the smallest element in the 2n partition
+	   [ 1 2 3 4|5 6 7 ]
+	   quick sort is implements recursibely.
+
